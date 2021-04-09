@@ -151,15 +151,22 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-    <aside>
-
+  const $aside = $("<aside>")
+  $aside.attr("id", "middle-earth below mordor")
+  // $aside.append($)
     
-  // 2. display an unordered list of buddies in the aside
+  {/* // 2. display an unordered list of buddies in the aside */}
+        const $ul = $("<ul>")
 
-  // 3. give each of the buddies a class of "buddy"
-
-  // 4. don't forget to append them to the aside
-
+  {/* // 3. give each of the buddies a class of "buddy" */}
+ 
+  for (buddy of buddies) {
+      const $li = $("<li>").text(buddy)
+      $li.addClass("buddy")
+      $ul.append($li)
+  }
+  {/* // 4. don't forget to append them to the aside */}
+  $("<aside>").append($ul)
 };
 
 // COMMIT YOUR WORK
