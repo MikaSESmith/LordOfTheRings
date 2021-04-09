@@ -196,9 +196,9 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside'
-
+//      $.(buddies)[1].childNodes[3].nodeValue = "Aragorn"
+// };
 };
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
 
@@ -208,13 +208,17 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
+  const $div = $("<div>")
+  $div.attr("id", "the-fellowship")
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
-
-  // 3. append the fellowship to middle-earth
-
+        $div.append('<h1>The Fellowship</h1>')
+     
+     // 3. append the fellowship to middle-earth
+     $("The Fellowship").append($middle-earth)
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+        $(const hobbits + const buddies ).append("the-fellowship")
+        //not sure if I should use ul instead of const
 };
 
 // COMMIT YOUR WORK
