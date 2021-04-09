@@ -196,7 +196,7 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside'
-//      $.(buddies)[1].childNodes[3].nodeValue = "Aragorn"
+//      $.(buddies)[1].childNodes[3].nodeValue = "Aragorn" - come back to this
 // };
 };
 // COMMIT YOUR WORK
@@ -217,7 +217,7 @@ const forgeTheFellowShip = () => {
      // 3. append the fellowship to middle-earth
      $("The Fellowship").append($middle-earth)
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-        $(const hobbits + const buddies ).append("the-fellowship")
+        $( hobbits +  buddies ).append("the-fellowship")
         //not sure if I should use ul instead of const
 };
 
@@ -231,7 +231,7 @@ const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
         let buddie = Gandalf.pop
-        let buddie = Gandalf the White.unshift
+        // let  = Gandalf the White.unshift - gotta figure out a way to rename this
 
   // 2. add a class "the-white" to this element
   $li.addClass("the-white")
@@ -248,11 +248,14 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
+        window.alert("the horn of gondor has been blown");
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+var str = "Boromir";
+var result = str.strike();
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+// look this up- come back to this- should be simple
 };
 
 // COMMIT YOUR WORK
@@ -266,7 +269,9 @@ const itsDangerousToGoAlone = () => {
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+  const $div = $("<div>")
+  $div.attr("id", "mount-doom")
+  $("#Mordor").append($ul)
 };
 
 // COMMIT YOUR WORK
@@ -278,9 +283,12 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  const $div = $("<div>")
+  $div.attr("id", "gollum")
+  $("#Mordor").append($ul)
 
   // 2. Move the ring from Frodo and give it to Gollum
-
+// come back to this
   // 3. Move Gollum into Mount Doom
 
 };
@@ -294,6 +302,8 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
+
+  
 
   // 2. remove all the baddies from the DOM
 
