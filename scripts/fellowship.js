@@ -105,6 +105,7 @@ const makeHobbits = () => {
 // ============
 const keepItSecretKeepItSafe = () => {
 console.log("keep it secret")
+
   // 1. create an empty div with an id of 'the-ring'
 
   const $div = $("<div>")
@@ -112,8 +113,9 @@ console.log("keep it secret")
 
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-    const $hobbits = $(".hobbits")
+    const $hobbits = $(".hobbit")
     $hobbits.eq(0).append($div)
+
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
 };
@@ -126,17 +128,19 @@ console.log("keep it secret")
 // ============
 const makeBaddies = () => {
 
-  // 1. display an unordered list of baddies in Mordor
-    $li.addClass("baddies in Mordor")
-
-  // 2. give each of the baddies a class of "baddy"
-    $("li").addClass("baddy")
-
+    // 1. display an unordered list of baddies in Mordor
+  const $ul = $("<ul>")
+      // 2. give each of the baddies a class of "baddy"
+  for (baddy of baddies) {
+      const $li = $("<li>").text(baddy)
+      $li.addClass("baddy")
+      $ul.append($li)
+  }
   // 3. remember to append the ul to Mordor
-  $ul.append($Mordor)
-
-
+  $("#Mordor").append($ul)
 };
+
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -147,7 +151,9 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
+    <aside>
 
+    
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
